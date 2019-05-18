@@ -5,25 +5,29 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.zhezii</groupId>
-    <artifactId>springcloud-eurerka</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>springcloud-eureka</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>eurerka</name>
+    <name>springcloud-eureka</name>
     <description>服务的注册与发现</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.0.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.0.3.RELEASE</version>
+        <relativePath/>
     </parent>
+
+    <modules>
+        <module>eureka-server</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -54,9 +58,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <modules>
-
-    </modules>
 
 </project>

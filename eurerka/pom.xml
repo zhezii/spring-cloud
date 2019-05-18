@@ -21,6 +21,8 @@
 
     <modules>
         <module>eureka-server</module>
+        <module>eureka-client</module>
+        <module>service-feign</module>
     </modules>
 
     <properties>
@@ -35,6 +37,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 

@@ -9,3 +9,9 @@ server:
 spring:
   application:
     name: service-ribbon
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

@@ -19,9 +19,12 @@ public class PrintController {
     private String port;
 
     @ResponseBody
-    @GetMapping(value = "/printName/{name}" )
+    @GetMapping(value = "/printName/{name}/age" )
     public String printName(@PathVariable("name") String name) {
 
         return "hi"+name+" i am from:"+port;
     }
+
+
+
 }

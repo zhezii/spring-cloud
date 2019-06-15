@@ -1,0 +1,9 @@
+#\u8FD9\u91CC\u5BF9\u5E94Nacos Config\u4E2D\u7684Data ID
+spring:
+  application:
+    name: nacos-provider-config
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: 127.0.0.1:8848

@@ -1,0 +1,11 @@
+#这里对应Nacos Config中的Data ID
+spring:
+  profiles:
+    active: prod
+  application:
+    name: nacos-provider-config
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: 127.0.0.1:8848

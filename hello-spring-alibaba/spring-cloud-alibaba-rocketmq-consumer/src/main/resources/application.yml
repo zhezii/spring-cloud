@@ -8,11 +8,14 @@ spring:
           namesrv-addr: 192.168.14.135:9876
         bindings:
           input: {consumer.orderly: true}
-      binders:
+      bindings:
         input: {destination: test-topic, content-type: text/plain, group: test-group, consumer.maxAttempts: 1}
-        input1: {destination: test-topic1, content-type: text/plain, group: test-group, consumer.maxAttempts: 1}
-        input2: {destination: test-topic2, content-type: text/plain, group: test-group, consumer.maxAttempts: 1}
-        input3: {destination: test-topic3, content-type: text/plain, group: test-group, consumer.maxAttempts: 1}
-        input4: {destination: test-topic4, content-type: text/plain, group: test-group, consumer.maxAttempts: 1}
+
 server:
   port: 9094
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

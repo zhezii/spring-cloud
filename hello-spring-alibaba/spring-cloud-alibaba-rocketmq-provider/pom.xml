@@ -16,7 +16,6 @@
     <name>spring-cloud-alibaba-rocketmq-provider</name>
 
     <dependencies>
-
         <!-- Spring Cloud Begin -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

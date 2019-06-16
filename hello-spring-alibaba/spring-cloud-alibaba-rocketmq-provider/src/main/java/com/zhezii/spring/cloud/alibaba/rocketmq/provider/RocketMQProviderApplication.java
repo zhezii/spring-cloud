@@ -1,12 +1,13 @@
 package com.zhezii.spring.cloud.alibaba.rocketmq.provider;
 
-import com.zhezii.spring.cloud.alibaba.rocketmq.provider.service.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.support.MessageBuilder;
 
 /**
  * @author Zhou Wenzhe
@@ -17,7 +18,7 @@ import org.springframework.cloud.stream.messaging.Source;
 public class RocketMQProviderApplication implements CommandLineRunner {
 
     @Autowired
-    private ProviderService providerService;
+    private MessageChannel output;
 
     public static void main(String[] args) {
         SpringApplication.run(RocketMQProviderApplication.class, args);
@@ -30,6 +31,6 @@ public class RocketMQProviderApplication implements CommandLineRunner {
      */
     @Override
     public void run(String... args) throws Exception {
-        providerService.send("Hello RocketMQ");
+        output.send(MessageBuilder.withPayload("Hello RocketMQ").build());
     }
 }

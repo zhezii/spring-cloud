@@ -14,9 +14,4 @@ public class ConsumerReceive {
     public void receiveInput(String message) {
         System.out.println("Receive input: " + message);
     }
-
-    @StreamListener("input1")
-    public void receiveInput1(String message) {
-        System.out.println("Receive input1: " + message);
-    }
 }
